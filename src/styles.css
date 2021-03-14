@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* update your 'styles.css' with */
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/*Animation for lift*/
+
+#coloumn1 {
+    position: relative;
+    -webkit-animation-name: coloumn1;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: coloumn1;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+#coloumn4 {
+    position: relative;
+    -webkit-animation-name: coloumn4;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards;
+    /* Safari 4.0 - 8.0 */
+    animation-name: coloumn4;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    margin-top: 0px;
+    z-index: 10;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes coloumn1 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes coloumn4 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes coloumn1 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes coloumn4 {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+.g {
+    background-image: url("~/assets/images/aufzug2.PNG");
+    background-size: 50% 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.grid-50 {
+    width: calc(50% - 0px);
+    height: 100%;
+    overflow: hidden;
+}

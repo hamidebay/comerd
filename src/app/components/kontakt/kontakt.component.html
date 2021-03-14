@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <h3>Kontakt</h3>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="Name" formControlName="username">
+            <mat-error *ngIf="contactForm.get('username').hasError('required')">Pflichtfeld</mat-error>
+            <mat-error *ngIf="contactForm.get('username').hasError('minlength')">Mindestlänge ist 3</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="Firma" formControlName="firma">
+            <mat-error *ngIf="contactForm.get('firma').hasError('required')">Pflichtfeld</mat-error>
+            <mat-error *ngIf="contactForm.get('firma').hasError('minlength')">Mindestlänge ist 3</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="Telefon" formControlName="telefon">
+            <mat-error *ngIf="contactForm.get('telefon').hasError('required')">Pflichtfeld</mat-error>
+            <mat-error *ngIf="contactForm.get('telefon').hasError('minlength')">Mindestlänge ist 3</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="legacy">
+            <input matInput placeholder="Email Adresse (pat@example.com)" formControlName="email" required>
+            <mat-error *ngIf="contactForm.get('email').invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br> <br>
+
+        <div formGroupName="address" id="adresse">
+            <mat-form-field appearance="legacy">
+                <input matInput placeholder="Strasse" formControlName="street">
+                <!--
+                <mat-error *ngIf="contactForm.get('address').get('street').invalid">Min lenght is 3</mat-error>
+                -->
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="legacy">
+                <input matInput placeholder="Ort" formControlName="city">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="legacy">
+                <input matInput placeholder="PLZ" formControlName="postalCode">
+            </mat-form-field>
+            <br>
+        </div>
+
+
+        <mat-form-field appearance="legacy">
+            <textarea matInput placeholder="Mitteilung" formControlName="messageText" rows="6"></textarea>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button type="senden">Submit</button>
+    </form>
+</div>

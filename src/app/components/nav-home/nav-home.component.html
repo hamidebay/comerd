@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Commerd-Tech</title>
+</head>
+
+<body>
+    <nav class="d-sm-none navbar navbar-dark navbar-extend-sm navbar-bg">
+        <div class="container">
+            <div class="navbar-brand mr-auto">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="/home">
+                    <img src="../assets/images/comerdtechlogo.png" alt="comerdtechlogo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto ml-2">
+                    <li class="nav-item active"><a class="nav-link" href="/home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/uberuns">Über uns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/kontakt">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="bg-contianer">
+        <header>
+            <img class="d-none d-sm-block" src="../assets/images/comerdtechlogo.png" alt="xxx">
+        </header>
+
+        <main>
+            <div class="main-left row d-flex align-items-center">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/home">
+                        <button class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x"
+                                aria-hidden="true"></i>
+                            <div class="button-text">Home</div>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/gallery">
+                        <button class="rounded-circle button-span d-none d-sm-block">
+                            <div class="button-text-down">Gallery</div><i class="fa fa-caret-down fa-2x"
+                                aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="main-mid">
+                <div class="lift-top"></div>
+
+                <div class="lift-mid">
+                    <div class="lift-mid-left"></div>
+
+                    <div class="lift-mid-mid">
+                        <router-outlet></router-outlet>
+                    </div>
+
+                    <div class="lift-mid-right"></div>
+                </div>
+
+                <div class="lift-bottom"></div>
+
+                <div *ngIf="inaktifLift === false" class="row lift">
+                    <div id="coloumn1" class="g grid-50"></div>
+                    <div id="coloumn4" class="g grid-50"></div>
+                </div>
+            </div>
+
+            <div class="main-right row d-flex align-items-center">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/ueber-uns">
+                        <button id = "uber-uns-btn" class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x"
+                                aria-hidden="true"></i>
+                            <div class="button-text">Über Uns</div>
+                        </button>
+                    </a>
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="/kontakt">
+                        <button class="rounded-circle button-span d-none d-sm-block">
+                            <div class="button-text-down">Kontakt</div><i class="fa fa-caret-down fa-2x"
+                                aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="row">
+            <div class="col-12 col-sm-4">
+                <img src="../assets/images/comerdtechlogo5.png" alt="xxx">
+            </div>
+            <div class="col-10 col-sm-6 d-flex align-items-end justify-content-center pl-1">
+                Copyright © Comerd-Tech GmbH - All rights reserved.
+            </div>
+            <div class="col-2 col-sm-2 d-flex align-items-end justify-content-end pr-1">
+                Made by <a href="https://www.baycom.ch"> <span class="pl-1 pr-1">baycom</span></a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
+
+
+<!--
+
+
+    <div class="header-home jumbotron-fluid">
+        <div class="header-left"></div>
+        <div class="header-midd">
+            <img src="../assets/images/comerdtechlogo.png" alt="xxx">
+        </div>
+        <div class="header-right"></div>
+    </div>
+
+    <div class="main">
+        <div class="main-left row d-flex align-items-center">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="/home">
+                    <button class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x" aria-hidden="true"></i><div class="button-text">Home</div></button>
+                </a>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <a href="/gallery">
+                    <button class="rounded-circle button-span d-none d-sm-block"><div class="button-text-down">Gallery</div><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></button>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-midd">
+            <div class="in-lifting-top"></div>
+
+            <div class="in-lifting-midd">
+                <div class="in-lifting-midd-left"></div>
+                <div class="in-lifting-midd-midd">
+                    <router-outlet></router-outlet>
+                </div>
+                <div class="in-lifting-midd-right"></div>
+            </div>
+
+            <div class="in-lifting-bottom"></div>
+
+            <div *ngIf="inaktifLift === false" class="row lift">
+                <div id="coloumn1" class="g grid-50"></div>
+                <div id="coloumn4" class="g grid-50"></div>
+            </div>
+        </div>
+
+        <div class="main-right row d-flex align-items-center">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="/ueber-uns">
+                    <button class="rounded-circle button-span d-none d-sm-block"><i class="fa fa-caret-up fa-2x" aria-hidden="true"></i><div class="button-text">Über Uns</div></button>
+                </a>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <a href="/kontakt">
+                    <button class="rounded-circle button-span d-none d-sm-block"><div class="button-text-down">Kontakt</div><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-left">
+            <img src="../assets/images/comerdtechlogo5.png" alt="xxx" height="100%">
+        </div>
+        <div class="footer-midd d-flex align-items-end justify-content-center">
+            Copyright © Comerd-Tech GmbH - All rights reserved.
+        </div>
+        <div class="footer-right d-flex align-items-end justify-content-end">
+            Made by <a href="https://www.baycom.ch"> <span class="pl-1 pr-1">baycom</span></a>
+        </div>
+    </footer>
+
+
+-->
