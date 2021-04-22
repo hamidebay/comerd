@@ -8,7 +8,11 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
 })
 export class GalleryComponent implements OnInit {
 
+  // slayt icin;
   images = ['../assets/images/1.jpeg', '../assets/images/2.jpeg', '../assets/images/3.jpeg', '../assets/images/4.jpeg'];
+  
+  // alltaki gallery resimleri icin;
+  imagesforgallery = ['../assets/images/25.jpg', '../assets/images/12.jpg', '../assets/images/13.jpg', '../assets/images/14.jpg'];
 
   OpenImg = '';
 

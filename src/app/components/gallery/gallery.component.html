@@ -11,24 +11,53 @@
             </ng-template>
         </ngb-carousel>
     </div>
-
-    <!-- The Modal -->
+    <!-- Gallery modal butonu -->
+    <button type="button" class="btn mt-2 btn-outline-dark btn-lg btn-block" data-toggle="modal" data-target="#myModalGallery"
+    style = "background-color: #6096CA; letter-spacing: 3px; height: 70px; font-family: 'Courier New', Courier, monospace; font-weight: bold;">Bildergallery</button>
+        
+    <!-- The Modal slayttaki fotograflar icin -->
     <div class="modal" id="myModal">
         <div class="modal-dialog my-modal-dialog">
             <div class="modal-content my-modal-body">
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <img class="img-fluid img-thumbnail" [src]= "OpenImg" alt="My image description">
+                    <img class="img-fluid img-thumbnail" [src]="OpenImg" alt="My image description">
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row mt-3 mt-sm-5 pl-3 pr-3 pt-1">
-        <div class="card-columns">
-            <div class="card bg-light" *ngFor="let image of images">
-                <img class="card-img-top" [src]="image" alt="Card image"  data-toggle="modal" data-target="#myModal" (click)="OpenImage(image)">
+    <!-- The Modal gallery icin -->
+    <div class="modal" id="myModalGallery">
+        <div class="modal-dialog my-modal-dialog">
+            <div class="modal-content my-modal-body">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="row mt-3 mt-sm-5 pl-3 pr-3 pt-1">
+                        <div class="card-columns">
+                            <div class="card bg-light" *ngFor="let image of imagesforgallery">
+                                <div data-toggle="modal" data-target="#myModalFotoFromGallery" (click)="OpenImage(image)"> 
+                                    <img class="card-img-top" [src]="image" alt="Card image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal foto from gallery icin -->
+    <div class="modal" id="myModalFotoFromGallery">
+        <div class="modal-dialog my-modal-dialog">
+            <div class="modal-content my-modal-body">
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img class="img-fluid img-thumbnail" [src]="OpenImg" alt="My image description">
+                </div>
             </div>
         </div>
     </div>
