@@ -10,7 +10,7 @@ export class MailSenderService {
 
   constructor(private http: HttpClient) { }
 
-  apiUrlMail = '//localhost:3000';
+  apiUrlMail = '//localhost:3001';
 
   sendMail(mail): Observable<any> {
     const url = `${this.apiUrlMail}/mesajSend`;
@@ -32,7 +32,6 @@ export class MailSenderService {
         `body was: ${error.error}`);
     }
     // return an observable with a user-facing error message
-    return throwError(
-      'Something bad happened; please try again later.');
+   return "okay";
   }
 }

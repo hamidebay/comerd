@@ -40,4 +40,8 @@
     h3, p, li {
         font-size: xx-small;
     }
+    .container-fluid {
+      width: 92%;
+      margin:auto;
+  }
 }

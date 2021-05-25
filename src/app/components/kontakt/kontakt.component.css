@@ -84,4 +84,9 @@ mat-form-field {
     mat-form-field {
         width: 100%;
     }
+    .container-fluid {
+        width: 92%;
+        margin:auto;
+    }
 }
+

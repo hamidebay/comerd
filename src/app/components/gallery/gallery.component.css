@@ -40,3 +40,14 @@
   ::-webkit-scrollbar-thumb:hover {
     background: rgb(71, 71, 139);  
   }
+
+  @media only screen and (max-width: 576px) {
+    .container-fluid {
+      width: 92%;
+      margin:auto;
+  }
+}
+
+ol.carousel-indicators{z-index: 1}
+
+body{background-color:#8e8f8b}

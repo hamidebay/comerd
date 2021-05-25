@@ -2,9 +2,9 @@
     <div class="row pl-3 pr-3">
         <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
             <ng-template ngbSlide *ngFor="let img of images; index as i">
-                <!--fotolarin uzerine yazi yazmak istiyorsan buranin icine yazabilirsiniz!!!
-                    <div class="carousel-caption"></div>
-                    -->
+                <!--   fotolarin uzerine yazi yazmak istiyorsan buranin icine yazabilirsiniz!!!
+                    <div class="carousel-caption"></div> -->
+
                 <div data-toggle="modal" data-target="#myModal" (click)="OpenImage(img)">
                     <img class="img-fluid img-thumbnail" [src]="img" alt="My image {{i + 1}} description">
                 </div>
@@ -12,9 +12,9 @@
         </ngb-carousel>
     </div>
     <!-- Gallery modal butonu -->
-    <button type="button" class="btn mt-2 btn-outline-dark btn-lg btn-block" data-toggle="modal" data-target="#myModalGallery"
-    style = "background-color: #6096CA; letter-spacing: 3px; height: 70px; font-family: 'Courier New', Courier, monospace; font-weight: bold;">Bildergallery</button>
-        
+    <!--   <button type="button" class="btn mt-2 btn-outline-dark btn-lg btn-block" data-toggle="modal" data-target="#myModalGallery"
+    style = "background-color: #6096CA; letter-spacing: 3px; height: 35px; font-family: 'Courier New', Courier, monospace; font-weight: bold;">Bildergallery</button> -->
+
     <!-- The Modal slayttaki fotograflar icin -->
     <div class="modal" id="myModal">
         <div class="modal-dialog my-modal-dialog">
@@ -38,7 +38,8 @@
                     <div class="row mt-3 mt-sm-5 pl-3 pr-3 pt-1">
                         <div class="card-columns">
                             <div class="card bg-light" *ngFor="let image of imagesforgallery">
-                                <div data-toggle="modal" data-target="#myModalFotoFromGallery" (click)="OpenImage(image)"> 
+                                <div data-toggle="modal" data-target="#myModalFotoFromGallery"
+                                    (click)="OpenImage(image)">
                                     <img class="card-img-top" [src]="image" alt="Card image">
                                 </div>
                             </div>
@@ -61,4 +62,7 @@
             </div>
         </div>
     </div>
+    <button type="button" class="btn mt-2 btn-outline-dark btn-lg btn-block text-center" data-toggle="modal"
+        data-target="#myModalGallery"
+        style="background-color: #6096CA; letter-spacing: 1px; height: 35px; font-family: 'Courier New', Courier, monospace; font-weight: bold; width: 100%; font-size:medium;">Bildergalerie</button>
 </div>
